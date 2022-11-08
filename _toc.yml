@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: docs/en_fortelling.ipynb
+  sections:
+  - file: docs/hva_er_hydrogen.ipynb
+  - file: docs/emisjon_absorpsjon.ipynb
+  - file: docs/fotoelektrisk_effekt.ipynb
+  - file: docs/sammensetning.ipynb
+  - file: docs/stabilitet.ipynb
+- file: docs/klassisk_hypotese.ipynb
+- file: docs/klassisk.ipynb
+  sections:
+  - file: docs/derivasjon.ipynb
+- file: docs/dobbeltspalt.ipynb
