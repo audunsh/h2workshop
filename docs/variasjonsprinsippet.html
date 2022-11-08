@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Bestanddelene i hydrogen &#8212; Besøk fra talentsenteret</title>
+    <title>Schrödingerlikningen for hydrogenatomet &#8212; Besøk fra talentsenteret</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -57,8 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/h_favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Hydrogen er stabilt" href="stabilitet.html" />
-    <link rel="prev" title="Den fotoelektriske effekten" href="fotoelektrisk_effekt.html" />
+    <link rel="prev" title="Kvantemekanikk" href="kvantemekanikk.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,16 +118,16 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="en_fortelling.html">
    En fortelling om hydrogen
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="hva_er_hydrogen.html">
      Hva er hydrogen?
@@ -144,8 +143,8 @@ const thebe_selector_output = ".output, .cell_output"
      Den fotoelektriske effekten
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="sammensetning.html">
      Bestanddelene i hydrogen
     </a>
    </li>
@@ -181,8 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
    Kvantemekanikk
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variasjonsprinsippet.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Schrödingerlikningen for hydrogenatomet
   </a>
  </li>
@@ -245,7 +244,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/audunsh/h2workshop/main?urlpath=tree/docs/sammensetning.ipynb"
+        <a href="https://mybinder.org/v2/gh/audunsh/h2workshop/main?urlpath=tree/docs/variasjonsprinsippet.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -305,7 +304,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/audunsh/h2workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/sammensetning.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/audunsh/h2workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/variasjonsprinsippet.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -333,7 +332,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/sammensetning.ipynb"
+        <a href="../_sources/docs/variasjonsprinsippet.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,17 +393,22 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Bestanddelene i hydrogen
+   Schrödingerlikningen for hydrogenatomet
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppdagelsen-av-elektronet">
-   Oppdagelsen av elektronet
+  <a class="reference internal nav-link" href="#variasjonsprinsippet">
+   Variasjonsprinsippet
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppdagelsen-av-atomkjernen">
-   Oppdagelsen av atomkjernen
+  <a class="reference internal nav-link" href="#variasjonsprinsippet-i-praksis">
+   Variasjonsprinsippet i praksis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variasjonsprinsippet-for-hydrogen">
+   Variasjonsprinsippet for hydrogen
   </a>
  </li>
 </ul>
@@ -416,7 +420,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Bestanddelene i hydrogen</h1>
+                <h1>Schrödingerlikningen for hydrogenatomet</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -428,17 +432,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Bestanddelene i hydrogen
+   Schrödingerlikningen for hydrogenatomet
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppdagelsen-av-elektronet">
-   Oppdagelsen av elektronet
+  <a class="reference internal nav-link" href="#variasjonsprinsippet">
+   Variasjonsprinsippet
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppdagelsen-av-atomkjernen">
-   Oppdagelsen av atomkjernen
+  <a class="reference internal nav-link" href="#variasjonsprinsippet-i-praksis">
+   Variasjonsprinsippet i praksis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variasjonsprinsippet-for-hydrogen">
+   Variasjonsprinsippet for hydrogen
   </a>
  </li>
 </ul>
@@ -451,85 +460,129 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="bestanddelene-i-hydrogen">
-<h1>Bestanddelene i hydrogen<a class="headerlink" href="#bestanddelene-i-hydrogen" title="Permalink to this headline">#</a></h1>
-<p>En viktig brikke i vår forståelse av hva som holder molekyler og atomer sammen er at <em>ladede objekter trekker og dytter på hverandre</em> - det som kalles elektrostatiske vekselvirkninger.</p>
-<p>Allerede på tidlig 1800-tall kjente forskere til at ladede objekter vekselvirker gjennom <a href="https://no.wikipedia.org/wiki/Coulombs_lov">Coulombs lov</a>. Kreftene som virker mellom to ladninger <span class="math notranslate nohighlight">\(Q_1\)</span> og <span class="math notranslate nohighlight">\(Q_2\)</span>, separert med en avstand <span class="math notranslate nohighlight">\(r_{12}\)</span> kan uttrykkes</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="schrodingerlikningen-for-hydrogenatomet">
+<h1>Schrödingerlikningen for hydrogenatomet<a class="headerlink" href="#schrodingerlikningen-for-hydrogenatomet" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<p>Schrödingerlikningen for hydrogenatomet kan skrives</p>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{F}_1 = \frac{1}{4 \pi \varepsilon_0} \frac{Q_1 Q_2}{r_{12}^2} \hat{\mathbf{r}}, \tag{2}
+\Big{ (}-\frac{\hbar^2}{2m}\nabla^2 + \frac{1}{r} \Big{)} \Psi(x,y,z,t) = i \hbar \frac{\partial }{\partial t}\Psi(x,y,z,t),
 \]</div>
-<p>hvor <span class="math notranslate nohighlight">\(r_{12} = \vert \mathbf{r}_{12} \vert = \vert \mathbf{r}_1 - \mathbf{r}_2 \vert\)</span> er abstanden mellom objektene, vektoren <span class="math notranslate nohighlight">\(\hat{\mathbf{r}} = \frac{\mathbf{r}_1 - \mathbf{r}_2}{r_{12}}\)</span> er retningen mellom objektene og <span class="math notranslate nohighlight">\(\varepsilon_0\)</span> er den såkalte elektriske konstanten.</p>
-<p>Atomer er i seg selv nøytrale (ingen ladning), men som vi skal se kan de under visse betingelser splittes opp i mindre bestanddeler med ladning.</p>
+<p>hvor <span class="math notranslate nohighlight">\(r = \sqrt{x^2 + y^2 + z^2}\)</span>. Dette er en svært komplisert likning å løse med penn og papir, så selv på bachelornivå i kjemi holder vi oss til å <em>vise</em> hvordan man løser likningen heller enn å faktisk be studentene løse den. I dag skal vi se om vi kan løse likningen på en mindre konvensjonell måte.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="oppdagelsen-av-elektronet">
-<h1>Oppdagelsen av elektronet<a class="headerlink" href="#oppdagelsen-av-elektronet" title="Permalink to this headline">#</a></h1>
-<p>I 1897 observerte den britiske fysikeren Joseph John Thomson at atomer kan sende ut partikler med negativ ladning. Ved å måle hvordan stråling fra såkalte <a href="https://no.wikipedia.org/wiki/Bilder%C3%B8r">katodestrålerør</a> bøyde av i elektriske felter kunne han både avgjøre at partiklene hadde negativ ladning, samt anslag partiklenes masse til å være langt lavere enn atomet som helhet. Disse partiklene har i dag fått navnet <em>elektroner</em>.</p>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<p><img alt="Rosinbolle" src="../_images/plum_pudding_nobeam.png" />
-I rosinbollemodellen består atomet av en negativt ladde elektroner i et hav av positiv ladning.</p>
-</aside>
-<p>Videre, ettersom atomene opprinnelig hadde vært nøytrale (ingen ladning) antok Thomson at atomer bestod av negative partikler som badet i et “hav” av positivt ladde partikler. Denne modellen har fått navnet <em>rosinbollemodellen</em> (på engelsk: <em>plum-pudding model</em>), hvor elektronene er rosinen i bolla.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="variasjonsprinsippet">
+<h1>Variasjonsprinsippet<a class="headerlink" href="#variasjonsprinsippet" title="Permalink to this headline">#</a></h1>
+<p>Et av de viktigste verktøyene vi kvantekjemikere har til rådighet kalles <em>variasjonsprinsippet</em>. Det forteller oss at om vi kan komme opp med et gjett på hva bølgefunksjonen til et system skal være, så kan vi fra Schrödingerlikningen finne en energi <span class="math notranslate nohighlight">\(E_{\text{var}}\)</span> for denne bølgefunksjonen som alltid er større eller lik den laveste energien <span class="math notranslate nohighlight">\(E_0\)</span> som systemet kan ha i virkeligheten.</p>
+<p>I tillegg forteller prinsippet oss at i det tilfellet hvor energien <span class="math notranslate nohighlight">\(E_{\text{var}}\)</span> er den samme som systemets egentlige laveste energi <span class="math notranslate nohighlight">\(E_0\)</span>, så har vi funnet den korrekte løsningen på likningen.</p>
+<p>Vi kan uttrykke dette prinsippet som</p>
+<div class="math notranslate nohighlight">
+\[
+E_{\text{var}}(\Psi) \geq E_0
+\]</div>
+<p>Utfordringen blir dermed å komme opp med en mulig <span class="math notranslate nohighlight">\(\Psi\)</span> som beskriver systemet vårt.</p>
+<p>Det gjelder selvsagt noen regler for hvordan <span class="math notranslate nohighlight">\(\Psi\)</span> skal være, men det kanskje viktigste er at kvadratet av funksjonen må kunne tolkes som en sannsynlighet. Derfor kan den ikke være uendelig eller ha flere verdier noen steder, og den må kunne gi sannsynligheten 1 for å finne partikkelen i hele rommet.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="oppdagelsen-av-atomkjernen">
-<h1>Oppdagelsen av atomkjernen<a class="headerlink" href="#oppdagelsen-av-atomkjernen" title="Permalink to this headline">#</a></h1>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<p><img alt="Atomkjernen" src="../_images/figure_2_nobeam.png" />
-En massiv positivt ladd kjerne omgitt av lette, negativt ladde elektroner.</p>
-</aside>
-<p>Det hersket ikke enighet om rosinbollemodellen, og enkelte spekulerte i om en modell som lignet mer på solsystemet kunne ha noe for seg - en massiv positivt ladd kjerne omgitt av lette, negative elektroner.</p>
-<p>For å avgjøre dette spørsmålet ble <a href="https://en.wikipedia.org/wiki/Geiger%E2%80%93Marsden_experiments">en serie eksperimenter</a> gjennomført mellom 1908 og 1913 av Ernst Rutherford, Hans Geiger og Ernest Marsden, hvor de bestrålte gullfolie med positivt ladede partikler, som vist i figuren under.</p>
-<figure class="align-default" id="figure-1">
-<a class="reference internal image-reference" href="../_images/figure_1.png"><img alt="../_images/figure_1.png" src="../_images/figure_1.png" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Geiger-Marsden eksperimentet: gullfolie bestråles med positivt ladde partikler.</span><a class="headerlink" href="#figure-1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Rutherford forventet at dersom den positive ladningen var spredt utover hele atomet så ville den innkommende strålingen svakt endre retning på sin ferd gjennom materialet. Om den positive ladningen derimot var konsentrert i en massiv kjerne forventet han å se det meste av strålingen passere uanfektet gjennom materialet, med unntak av noen få stråler som ble kraftig spredt i ulike retninger.</p>
-<p>Som vist i figuren over var ble strålingen spredt i alle mulige retninger, noe selv i samme retning som det kom fra, så Rutherford konkluderte basert på dette med at atomet bestod av en massiv, positiv kjerne omgitt av relativt lette, negative elektroner.</p>
-<div class="admonition-diskuter admonition">
-<p class="admonition-title">Diskuter</p>
-<ul class="simple">
-<li><p>Hvordan forklarer du de to utfallene Rutherford så for seg i lys av Coulombs lov (likning 2)?</p></li>
-<li><p>Finnes det andre mulige tolkninger av Rutherfords eksperiment? Kan du se for deg en annen modell som gir samme resultat?</p></li>
-</ul>
+<section class="tex2jax_ignore mathjax_ignore" id="variasjonsprinsippet-i-praksis">
+<h1>Variasjonsprinsippet i praksis<a class="headerlink" href="#variasjonsprinsippet-i-praksis" title="Permalink to this headline">#</a></h1>
+<p>Nedenfor benyttes <a href="https://audunsh.github.io/braketlab/">BraketLab</a> en annen kode som vi har utviklet for læring og forskning her ved senteret. I cellen under får du en funksjon som tar inn en såkalt <code class="docutils literal notranslate"><span class="pre">sympy</span></code>-funksjon, og sjekker hvilken variasjonell energi den finner for et lekeproblem (ikke hydrogenatomet). Utfordringen til deg er å komme opp men en bølgefunksjon som kommer så lavt som mulig i energi, ved å endre litt på den funksjonen vi sender inn.</p>
+<p>Merk deg at vi ikke tar med tidsavhengighet her. Dette går fint, for det viktigste vi er ute etter her er å finne ut hva slags struktur elektronet har omkring dette systemet. Hvor lavt kan du komme i energi?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">braketlab</span> <span class="k">as</span> <span class="nn">bk</span>
+<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;x y z&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">variasjonell_energi</span><span class="p">(</span><span class="n">psi</span><span class="p">):</span>
+    
+    <span class="n">p</span> <span class="o">=</span> <span class="n">bk</span><span class="o">.</span><span class="n">ket</span><span class="p">(</span> <span class="n">psi</span> <span class="p">)</span> <span class="c1"># lag en bølgefunksjon</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">bra</span><span class="nd">@p</span><span class="p">)</span><span class="o">**-</span><span class="mf">.5</span> <span class="c1"># normaliser den</span>
+
+    <span class="n">m2</span> <span class="o">=</span> <span class="n">bk</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">kinetic_operator</span><span class="p">()</span> <span class="o">*</span> <span class="n">p</span>
+    <span class="c1">#m1 = bk.core.onebody_coulomb_operator() * p</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="n">bk</span><span class="o">.</span><span class="n">ket</span><span class="p">(</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">psi</span> <span class="p">)</span>
+
+    <span class="n">E_var</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">bra</span><span class="nd">@m2</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">bra</span><span class="nd">@m1</span> <span class="c1"># estimer energien med Monte-Carlo integrasjon (gir små unøyaktigheter)</span>
+    <span class="k">return</span> <span class="n">E_var</span><span class="p">,</span> <span class="n">p</span>
+    
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bubblebox</span> <span class="k">as</span> <span class="nn">bb</span>
-<span class="kn">import</span> <span class="nn">evince</span> <span class="k">as</span> <span class="nn">ev</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lag din bølgefunksjon her, sjekk hvor lavt du kommer i energi</span>
 
-<span class="n">hydrogen</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">(</span><span class="n">vel_electron</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.43</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]))</span>
-<span class="n">hydrogen</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
 
-<span class="c1">#hydrogen.advance = hydrogen.advance_euler</span>
+<span class="c1"># forandre på denne funksjonen for å finne en lavere variasjonell energi</span>
+<span class="n">psi</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mf">.1</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>  
 
-<span class="n">hydrogen</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.001</span>
-
-<span class="c1">#hydrogen.v()</span>
-
-<span class="n">b</span> <span class="o">=</span> <span class="n">ev</span><span class="o">.</span><span class="n">spotlight</span><span class="o">.</span><span class="n">SpotlightView</span><span class="p">(</span><span class="n">hydrogen</span><span class="p">)</span>
-
-<span class="n">b</span><span class="o">.</span><span class="n">window_scale</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">b</span>
+<span class="n">energi</span><span class="p">,</span> <span class="n">psi0</span> <span class="o">=</span> <span class="n">variasjonell_energi</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variasjonell energi:&quot;</span><span class="p">,</span> <span class="n">energi</span><span class="p">,</span> <span class="s2">&quot;(Hartrees)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "06c62c332fc342fa87bfca5cd3222b85"}
-</script></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variasjonell energi: 3.204790332857799 (Hartrees)
+</pre></div>
+</div>
+</div>
 </div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="variasjonsprinsippet-for-hydrogen">
+<h1>Variasjonsprinsippet for hydrogen<a class="headerlink" href="#variasjonsprinsippet-for-hydrogen" title="Permalink to this headline">#</a></h1>
+<p>La oss til sist sjekke en mulig løsning for elektronets fordeling rundt hydrogenkjernen.</p>
+<div class="admonition-diskuter admonition">
+<p class="admonition-title">Diskuter</p>
+<ul class="simple">
+<li><p>Har du noen forventning til hvordan denne fordelingen skal se ut? Som en boks, som en kule eller som en pyramide?</p></li>
+<li><p>Tror du det er mest sannsynlig å finne elektronet nært eller langt unna kjernen?</p></li>
+</ul>
+</div>
+<p>Vi vet at den eksakte løsningen (for grunntilstanden) er</p>
+<div class="math notranslate nohighlight">
+\[
+\Psi_0(x,y,z) = \frac{1}{\sqrt{\pi}} e^{-\sqrt{x^2 + y^2 + z^2}}
+\]</div>
+<p>og at grunntilstandsenergien skal være <span class="math notranslate nohighlight">\(E_0 = -0.5\)</span> Hartrees.</p>
+<p>vi har hjulpet deg litt i gang - kan du fullføre løsningen og sjekke at energien stemmer?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">variasjonell_energi</span><span class="p">(</span><span class="n">psi</span><span class="p">):</span>
+    
+    <span class="n">p</span> <span class="o">=</span> <span class="n">bk</span><span class="o">.</span><span class="n">ket</span><span class="p">(</span> <span class="n">psi</span> <span class="p">)</span> <span class="c1"># lag en bølgefunksjon</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">bra</span><span class="nd">@p</span><span class="p">)</span><span class="o">**-</span><span class="mf">.5</span> <span class="c1"># normaliser den</span>
 
+    <span class="n">m2</span> <span class="o">=</span> <span class="n">bk</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">kinetic_operator</span><span class="p">()</span> <span class="o">*</span> <span class="n">p</span>
+    <span class="n">m1</span> <span class="o">=</span> <span class="n">bk</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">onebody_coulomb_operator</span><span class="p">()</span> <span class="o">*</span> <span class="n">p</span>
+    
+    <span class="n">E_var</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">bra</span><span class="nd">@m2</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">bra</span><span class="nd">@m1</span> <span class="c1"># estimer energien med Monte-Carlo integrasjon (gir små unøyaktigheter)</span>
+    <span class="k">return</span> <span class="n">E_var</span><span class="p">,</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span> <span class="o">..</span> <span class="p">)</span>
 
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"46307d2983814eb3b31318b534f690ec": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "06c62c332fc342fa87bfca5cd3222b85": {"model_name": "SpotlightModel", "model_module": "evince", "model_module_version": "^0.44.0", "state": {"_dom_classes": [], "_model_module": "evince", "_model_module_version": "^0.44.0", "_model_name": "SpotlightModel", "_view_count": null, "_view_module": "evince", "_view_module_version": "^0.44.0", "_view_name": "SpotlightView", "additive": false, "aperture": 0.001, "bg_color": [1.0, 1.0, 1.0], "bonds": [], "box": [2, 2, 2], "colors": [[0.5185252503626847, 0.1137707916254973, 0.3197909151921491], [0.6553708454221845, 0.6012770841015672, 0.6817716590508156]], "dof": false, "focus": 10.0, "fxaa": true, "init": true, "layout": "IPY_MODEL_46307d2983814eb3b31318b534f690ec", "masses": [1836, 1], "max_blur": 0.01, "pos": [[0.0, 0.0, 0.0], [1.0, 0.0, 0.0]], "radius": [1.0, 1.0, 1.0], "sao": false, "saoBias": 0.1, "saoBlur": false, "saoBlurDepthCutoff": 0.05, "saoBlurRadius": 50, "saoBlurStdDev": 1.0, "saoIntensity": 0.1, "saoKernelRadius": 10, "saoMinResolution": 0.5, "saoScale": 100.0, "tabbable": null, "tooltip": null, "window_scale": 0.5, "window_scale_height": 0.5, "window_scale_width": 0.75}}}, "version_major": 2, "version_minor": 0}
-</script>
+<span class="n">E0</span><span class="p">,</span> <span class="n">psi0</span> <span class="o">=</span> <span class="n">variasjonell_energi</span><span class="p">(</span><span class="n">psi</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variasjonell energi:&quot;</span><span class="p">,</span> <span class="n">energi</span><span class="p">,</span> <span class="s2">&quot;(Hartrees)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">psi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span> <span class="o">..</span> <span class="p">)</span>
+                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -558,19 +611,12 @@ En massiv positivt ladd kjerne omgitt av lette, negativt ladde elektroner.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="fotoelektrisk_effekt.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="kvantemekanikk.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Den fotoelektriske effekten</p>
+            <p class="prev-next-title">Kvantemekanikk</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="stabilitet.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hydrogen er stabilt</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

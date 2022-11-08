@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Kvantemekanikk &#8212; Jakten på stabilitet</title>
+    <title>Kvantemekanikk &#8212; Besøk fra talentsenteret</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,11 +50,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/h_favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Schrödingerlikningen for hydrogenatomet" href="variasjonsprinsippet.html" />
+    <link rel="prev" title="Dobbelspalteksperimentet" href="dobbeltspalt.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/hlogo_black.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Jakten på stabilitet</h1>
+      <h1 class="site-logo" id="site-title">Besøk fra talentsenteret</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -114,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="en_fortelling.html">
    En fortelling om hydrogen
@@ -159,17 +163,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="klassisk.html">
-   En modell basert på Newtons lover
+   Newtons lover og bevegelseslikningene
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="b%C3%B8lge_og_partikkel.html">
-   Bølge eller partikkel?
+   Del 2 : Bølge eller partikkel?
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="dobbeltspalt.html">
    Dobbelspalteksperimentet
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Kvantemekanikk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variasjonsprinsippet.html">
+   Schrödingerlikningen for hydrogenatomet
   </a>
  </li>
 </ul>
@@ -231,7 +245,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/audunsh/h2_workshop/master?urlpath=tree/docs/docs/kvantemekanikk.ipynb"
+        <a href="https://mybinder.org/v2/gh/audunsh/h2workshop/main?urlpath=tree/docs/kvantemekanikk.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -274,7 +288,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/audunsh/h2_workshop"
+        <a href="https://github.com/audunsh/h2workshop"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -291,7 +305,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/audunsh/h2_workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/kvantemekanikk.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/audunsh/h2workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/kvantemekanikk.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -462,16 +476,27 @@ E = hf, \quad p = \frac{hf}{c},
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="schrodingerlikningen">
 <h1>Schrödingerlikningen<a class="headerlink" href="#schrodingerlikningen" title="Permalink to this headline">#</a></h1>
-<p>Vi har tidligere simulert todimensjonale bølger ved å løse den klassiske bølgelikningen. På samme måte vil bølgefunksjonene som beskriver partiklene utvikle seg i henhold til en likning. Vi skal ikke utlede denne likningen (<a href="https://openworldlearning.github.io/docs/quantum_mechanics/schrodinger_equation.html">men se gjerne her for en utfyllende introduksjon</a>), men skriver den for ordens skyld ned her:</p>
+<p>Vi har tidligere simulert todimensjonale bølger ved å løse den klassiske bølgelikningen. På samme måte vil bølgefunksjonene som beskriver partiklene utvikle seg i henhold til en likning som ble introdusert av Erwing Schrödinger i 1925. Vi skal ikke utlede denne likningen (<a href="https://openworldlearning.github.io/docs/quantum_mechanics/schrodinger_equation.html">men se gjerne her for en utfyllende introduksjon</a>), men skriver den for ordens skyld ned her:</p>
 <div class="math notranslate nohighlight">
 \[
 \Big{ (}-\frac{\hbar^2}{2m}\frac{\partial^2 }{\partial x^2} + V(x) \Big{)} \Psi = i \hbar \frac{\partial }{\partial t}\Psi.
 \]</div>
-<p>I denne likningen er bølgefunksjonen <span class="math notranslate nohighlight">\(\Psi(x,t)\)</span> den ukjente som vi skal bestemme, mens <span class="math notranslate nohighlight">\(\hbar = \frac{h}{2\pi}\)</span> er Plancks konstant delt på <span class="math notranslate nohighlight">\(2\pi\)</span>, <span class="math notranslate nohighlight">\(V(x)\)</span> er et ledd som beskriver omgivelsene (den potensielle energien i et punkt <span class="math notranslate nohighlight">\(x\)</span>) og <span class="math notranslate nohighlight">\(i = \sqrt{2}\)</span> er den imaginære enheten.</p>
-<p>For å løse denne likningen for hydrogenatomet må vi sette inn for <span class="math notranslate nohighlight">\(V(x)\)</span>. Deretter kan vi enten være smarte, og løse problemet med penn og papir, eller vi kan bruke en algoritme slik vi gjorde for den klassiske</p>
+<p>I denne likningen er bølgefunksjonen <span class="math notranslate nohighlight">\(\Psi(x,t)\)</span> den ukjente som vi skal bestemme, mens <span class="math notranslate nohighlight">\(\hbar = \frac{h}{2\pi}\)</span> er Plancks konstant delt på <span class="math notranslate nohighlight">\(2\pi\)</span>, <span class="math notranslate nohighlight">\(m\)</span> er massen til partikkelen vi beskriver med <span class="math notranslate nohighlight">\(\Psi\)</span>, <span class="math notranslate nohighlight">\(V(x)\)</span> er et ledd som beskriver omgivelsene (den potensielle energien i et punkt <span class="math notranslate nohighlight">\(x\)</span>) og <span class="math notranslate nohighlight">\(i = \sqrt{2}\)</span> er den imaginære enheten.</p>
+<p>For å løse denne likningen for hydrogenatomet må vi sette inn for <span class="math notranslate nohighlight">\(V(x)\)</span> fra Coulombs lov. Deretter kan vi entent forsøke å løse problemet med penn og papir, eller vi <a href="https://openworldlearning.github.io/docs/quantum_mechanics/numeric_schrodinger_1d.html">kan bruke en algoritme </a> slik vi gjorde for den klassiske likningen.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="borns-fortolkning">
 <h1>Borns fortolkning<a class="headerlink" href="#borns-fortolkning" title="Permalink to this headline">#</a></h1>
+<p>Tenk nå tilbake på dobbeltspalteksperimentet. Det vi ønsker å beskrive med bølgefunksjonen er sannsynligheten for å måle partikkelen i ulike områder. Det vi ønsker oss er derfor en såkalt <em>sannsynlighetsfordeling</em> - en funksjon som viser oss hvor sannsynligheten er høy eller lav for å måle partikkelen.</p>
+<p>På samme måte som klassiske bølger vil bølgefunksjonen kunne være både positiv og negativ (faktisk også kompleks, men det skal vi ikke gå inn på her). Forestill deg at du kunne fryse tiden i et blikkstille basseng. Samle nå sammen en stor mengde vann som en stor, positiv bølge i midten av bassenget. Hva vil skje når tiden begynner å gå?Noen steder vil bølgen svinge opp, andre steder ned, men i ulike tidspunkter vil du ofte ha verdier i bølgen som ligger under det gjennomsnittlige nivået - altså negative utslag.</p>
+<p>Hvordan tolker vi en negativ sannsynlighet?</p>
+<p>Kvadratet av bølgen <span class="math notranslate nohighlight">\(\vert \Psi(x,t) \vert^2\)</span> er derimot alltid positivt, så om vi baserer vår fysiske fortolkning på dette finner vi noe som kan fortolkes som en sannsynlighetsfordeling.</p>
+<p>Dette er sannsynlighetsfortolkningen, introdusert av Max Born i siste halvdel av 1920-tallet, som vist i figuren under:</p>
+<figure class="align-default" id="figure-4">
+<a class="reference internal image-reference" href="../_images/wavefunction_8.png"><img alt="../_images/wavefunction_8.png" src="../_images/wavefunction_8.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Vi tolker kvadratet av bølgefunksjonen som en sannsynlighetstetthet.</span><a class="headerlink" href="#figure-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 
     <script type="text/x-thebe-config">
@@ -501,6 +526,20 @@ E = hf, \quad p = \frac{hf}{c},
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="dobbeltspalt.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Dobbelspalteksperimentet</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="variasjonsprinsippet.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Schrödingerlikningen for hydrogenatomet</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

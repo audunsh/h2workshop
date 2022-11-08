@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Dobbelspalteksperimentet &#8212; Jakten på stabilitet</title>
+    <title>Dobbelspalteksperimentet &#8212; Besøk fra talentsenteret</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../_static/h_favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Bølge eller partikkel?" href="b%C3%B8lge_og_partikkel.html" />
+    <link rel="next" title="Kvantemekanikk" href="kvantemekanikk.html" />
+    <link rel="prev" title="Del 2 : Bølge eller partikkel?" href="b%C3%B8lge_og_partikkel.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +100,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/hlogo_black.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Jakten på stabilitet</h1>
+      <h1 class="site-logo" id="site-title">Besøk fra talentsenteret</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -158,17 +161,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="klassisk.html">
-   En modell basert på Newtons lover
+   Newtons lover og bevegelseslikningene
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="b%C3%B8lge_og_partikkel.html">
-   Bølge eller partikkel?
+   Del 2 : Bølge eller partikkel?
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Dobbelspalteksperimentet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kvantemekanikk.html">
+   Kvantemekanikk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variasjonsprinsippet.html">
+   Schrödingerlikningen for hydrogenatomet
   </a>
  </li>
 </ul>
@@ -230,7 +243,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/audunsh/h2_workshop/master?urlpath=tree/docs/docs/dobbeltspalt.ipynb"
+        <a href="https://mybinder.org/v2/gh/audunsh/h2workshop/main?urlpath=tree/docs/dobbeltspalt.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -273,7 +286,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/audunsh/h2_workshop"
+        <a href="https://github.com/audunsh/h2workshop"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -290,7 +303,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/audunsh/h2_workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/dobbeltspalt.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/audunsh/h2workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/dobbeltspalt.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -400,7 +413,6 @@ Klassiske partikler passerer gjennom to spalter.</p>
 </figcaption>
 </figure>
 <p>Når bestanddelene (en etter en) passerer gjennom to spalter, så ser vi et interferensmønster på veggen bak. Dette betyr at også partikler som elektroner, atomer og molekyler har bølgeegenskaper. I tillegg, som en liten overraskelse, ser vi at dersom vi forsøker å detektere <em>hvilken</em> spalt partiklene passerer gjennom, så forsvinner interferensmønsteret og vi ser klassisk partikkeloppførsel (som biljardkuler).</p>
-<p>Sagt med litt andre ord, så er det ikke kun lys som har både partikkel- og bølgeegenskaper.</p>
 <div class="admonition-diskuter admonition">
 <p class="admonition-title">Diskuter</p>
 <ul class="simple">
@@ -442,8 +454,15 @@ Klassiske partikler passerer gjennom to spalter.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Bølge eller partikkel?</p>
+            <p class="prev-next-title">Del 2 : Bølge eller partikkel?</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="kvantemekanikk.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Kvantemekanikk</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

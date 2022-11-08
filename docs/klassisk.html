@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>En modell basert på Newtons lover &#8212; Jakten på stabilitet</title>
+    <title>Newtons lover og bevegelseslikningene &#8212; Besøk fra talentsenteret</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/h_favicon.png"/>
@@ -100,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/hlogo_black.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Jakten på stabilitet</h1>
+      <h1 class="site-logo" id="site-title">Besøk fra talentsenteret</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -161,7 +163,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   En modell basert på Newtons lover
+   Newtons lover og bevegelseslikningene
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="b%C3%B8lge_og_partikkel.html">
+   Del 2 : Bølge eller partikkel?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dobbeltspalt.html">
+   Dobbelspalteksperimentet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="kvantemekanikk.html">
+   Kvantemekanikk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variasjonsprinsippet.html">
+   Schrödingerlikningen for hydrogenatomet
   </a>
  </li>
 </ul>
@@ -223,7 +245,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/audunsh/h2_workshop/master?urlpath=tree/docs/docs/klassisk.ipynb"
+        <a href="https://mybinder.org/v2/gh/audunsh/h2workshop/main?urlpath=tree/docs/klassisk.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -266,7 +288,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/audunsh/h2_workshop"
+        <a href="https://github.com/audunsh/h2workshop"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -283,7 +305,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/audunsh/h2_workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/klassisk.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/audunsh/h2workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/klassisk.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -372,12 +394,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   En modell basert på Newtons lover
+   Newtons lover og bevegelseslikningene
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#konklusjon">
-   Konklusjon
+  <a class="reference internal nav-link" href="#en-modell">
+   En modell
   </a>
  </li>
 </ul>
@@ -389,7 +411,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>En modell basert på Newtons lover</h1>
+                <h1>Newtons lover og bevegelseslikningene</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -401,12 +423,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   En modell basert på Newtons lover
+   Newtons lover og bevegelseslikningene
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#konklusjon">
-   Konklusjon
+  <a class="reference internal nav-link" href="#en-modell">
+   En modell
   </a>
  </li>
 </ul>
@@ -419,9 +441,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="en-modell-basert-pa-newtons-lover">
-<h1>En modell basert på Newtons lover<a class="headerlink" href="#en-modell-basert-pa-newtons-lover" title="Permalink to this headline">#</a></h1>
-<p>Vi skal nå utforme en modell basert på det som kalles klassisk fysikk. Vi kommer til å møte en del matematiske uttrykk her for å ikke gjemme bort detaljer, men ikke nøl med å hoppe rett til konklusjonen her og gå løs på simuleringen dersom det blir for mye.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="newtons-lover-og-bevegelseslikningene">
+<h1>Newtons lover og bevegelseslikningene<a class="headerlink" href="#newtons-lover-og-bevegelseslikningene" title="Permalink to this headline">#</a></h1>
+<p>Vi skal nå utforme en modell basert på det som kalles klassisk fysikk. Vi kommer til å møte en del matematiske uttrykk her for å ikke gjemme bort detaljer, men ikke nøl med å hoppe rett til modellen her og gå løs på simuleringen dersom det blir for mye.</p>
 <hr class="docutils" />
 <p>Vi har tidligere sett at den elektromagnetiske kraften mellom to ladde partikler, i vårt tilfelle elektronet <span class="math notranslate nohighlight">\(Q_e\)</span> og protonet <span class="math notranslate nohighlight">\(Q_p\)</span> kan utrykkes</p>
 <div class="math notranslate nohighlight">
@@ -450,8 +472,8 @@ title="Print to PDF"
 \big{(}\frac{d}{dt} \big{)}^2 = \frac{d}{dt} \frac{d}{dt}.
 \]</div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="konklusjon">
-<h1>Konklusjon<a class="headerlink" href="#konklusjon" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="en-modell">
+<h1>En modell<a class="headerlink" href="#en-modell" title="Permalink to this headline">#</a></h1>
 <p>Om vi overlater derivasjonsoperasjonen til datamaskinen kan vi finne et uttrykk for posisjonen til partiklene litt frem i tid. Du kan sammenlikne det med å gjøre følgende:</p>
 <ol class="simple">
 <li><p>Beregn kreftene som virker på elektronet og protonet.</p></li>
@@ -460,6 +482,167 @@ title="Print to PDF"
 <li><p>Benytt farten til å oppdatere posisjonen til partikkelen.</p></li>
 <li><p>For de nye posisjonene, gjenta punkt 1-5.</p></li>
 </ol>
+<p>Du skal slippe å skrive kode for å gjøre dette fra bunnen av. Istedenfor skal bi benytte en kode som heter <a href="audunsh.github.io/bubblebox">BubbleBox</a>, utviklet her på Hylleraas for å lære studenter å gjøre klassiske simuleringer på molekylært nivå. Koden er tilgjengelig som en Python-modul over PyPI, og installeres med</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install bubblebox
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/bin/bash: pip: command not found
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nedenfor setter vi opp et hydrogenatom bestående av et proton og et elektron. Vi er ikke så opptatte av de eksakte verdiene for masse, ladning osv. - det viktigste er å finne ut om vi kan få dette til å bli stabilt. Du kan enten kjøre koden interaktivt i to celler som vist under, eller du kan gjøre en simulering hvor du regner litt frem i tids og deretter viser banen som elektronet har fulgt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bubblebox</span> <span class="k">as</span> <span class="nn">bb</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># for visualisering</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># for beregninger</span>
+
+
+<span class="n">elektronets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">protonets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">fest_protonet</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># sett opp hydrogen</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">()</span> <span class="c1">#proton_fixed = fest_protonet, vel_electron=elektronets_fart)</span>
+
+<span class="c1"># tidssteg for tidsintegrasjon</span>
+<span class="n">b</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.0001</span>
+
+<span class="c1"># antall tidssteg</span>
+<span class="n">Nt</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">Nt</span><span class="p">),</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">float</span><span class="p">)</span> <span class="c1">#array for å lagre elektronets posisjoner</span>
+
+
+
+<span class="c1"># Gjør Nt tidssteg og lagre sekvensvis posisjonene (numerisk integrasjon)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Nt</span><span class="p">):</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
+    <span class="n">pos</span><span class="p">[:,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">pos</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+    
+<span class="c1"># vis resultatene</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-2.0, 2.0)
+</pre></div>
+</div>
+<img alt="../_images/klassisk_5_1.png" src="../_images/klassisk_5_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elektronets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">protonets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">fest_protonet</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># sett opp hydrogen</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">(</span><span class="n">proton_fixed</span> <span class="o">=</span> <span class="n">fest_protonet</span><span class="p">,</span> <span class="n">vel_electron</span><span class="o">=</span><span class="n">elektronets_fart</span><span class="p">)</span>
+
+<span class="c1"># tidssteg for tidsintegrasjon</span>
+<span class="n">b</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.0001</span>
+
+<span class="c1"># antall tidssteg</span>
+<span class="n">Nt</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">Nt</span><span class="p">),</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">float</span><span class="p">)</span> <span class="c1">#array for å lagre elektronets posisjoner</span>
+
+
+<span class="n">b</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "4673610e348445de996dd1de8d8a01cf"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">b</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py:1127,</span> in <span class="ni">mdbox.run</span><span class="nt">(self, nsteps, n_iterations_per_step)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1125</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1126</span>     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iterations_per_step</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1127</span>         <span class="bp">self</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span>     <span class="bp">self</span><span class="o">.</span><span class="n">update_view</span><span class="p">()</span>
+
+<span class="nn">File /usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py:862,</span> in <span class="ni">mdbox.advance_vverlet</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span> <span class="bp">self</span><span class="o">.</span><span class="n">d_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">+</span> <span class="mf">.5</span><span class="o">*</span><span class="n">Fn</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">masses_inv</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span> <span class="n">pos_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">d_pos</span>
+<span class="ne">--&gt; </span><span class="mi">862</span> <span class="n">forces_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forces</span><span class="p">(</span><span class="n">pos_new</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">,</span> <span class="n">r2_cut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">r2_cut</span><span class="p">,</span> <span class="n">pair_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pair_list</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_</span> <span class="o">+</span> <span class="mf">.5</span><span class="o">*</span><span class="p">(</span><span class="n">forces_new</span> <span class="o">+</span> <span class="n">Fn</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">masses_inv</span>
+<span class="g g-Whitespace">    </span><span class="mi">866</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fn</span> <span class="o">=</span> <span class="n">forces_new</span>
+
+<span class="nn">File /usr/local/lib/python3.10/site-packages/numba/core/serialize.py:29,</span> in <span class="ni">_numba_unpickle</span><span class="nt">(address, bytedata, hashed)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="c1"># Keep unpickled object via `numba_unpickle` alive.</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="n">_unpickled_memo</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">---&gt; </span><span class="mi">29</span> <span class="k">def</span> <span class="nf">_numba_unpickle</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">bytedata</span><span class="p">,</span> <span class="n">hashed</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="sd">&quot;&quot;&quot;Used by `numba_unpickle` from _helperlib.c</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span><span class="sd">     Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="sd">         unpickled object</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">hashed</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">(</span><span class="n">proton_fixed</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">vel_electron</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mf">0.</span><span class="p">]))</span>
+
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">interactions</span><span class="p">)</span>
+<span class="n">B</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.0001</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">run</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
