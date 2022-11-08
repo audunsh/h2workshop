@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Dobbelspalteksperimentet &#8212; Jakten på stabilitet</title>
+    <title>Kvantemekanikk &#8212; Jakten på stabilitet</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/h_favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Bølge eller partikkel?" href="b%C3%B8lge_og_partikkel.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +114,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="en_fortelling.html">
    En fortelling om hydrogen
@@ -166,8 +167,8 @@ const thebe_selector_output = ".output, .cell_output"
    Bølge eller partikkel?
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dobbeltspalt.html">
    Dobbelspalteksperimentet
   </a>
  </li>
@@ -230,7 +231,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/audunsh/h2_workshop/master?urlpath=tree/docs/docs/dobbeltspalt.ipynb"
+        <a href="https://mybinder.org/v2/gh/audunsh/h2_workshop/master?urlpath=tree/docs/docs/kvantemekanikk.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -290,7 +291,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/audunsh/h2_workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/dobbeltspalt.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/audunsh/h2_workshop/issues/new?title=Issue%20on%20page%20%2Fdocs/kvantemekanikk.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -318,7 +319,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/dobbeltspalt.ipynb"
+        <a href="../_sources/docs/kvantemekanikk.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -355,23 +356,90 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Kvantemekanikk
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bolgefunksjoner">
+   Bølgefunksjoner
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schrodingerlikningen">
+   Schrödingerlikningen
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#borns-fortolkning">
+   Borns fortolkning
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Dobbelspalteksperimentet</h1>
+                <h1>Kvantemekanikk</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Kvantemekanikk
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bolgefunksjoner">
+   Bølgefunksjoner
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schrodingerlikningen">
+   Schrödingerlikningen
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#borns-fortolkning">
+   Borns fortolkning
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -379,36 +447,31 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="dobbelspalteksperimentet">
-<h1>Dobbelspalteksperimentet<a class="headerlink" href="#dobbelspalteksperimentet" title="Permalink to this headline">#</a></h1>
-<hr class="docutils" />
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<p><img alt="Klassisk dobbeltspalt" src="../_images/interference_.png" />
-Klassiske partikler passerer gjennom to spalter.</p>
-</aside>
-<p>Det finnes et eksperiment som synliggjør nær sagt hele det kvantemekaniske mysteriet. Med det du har lært så langt er du nå klar for å se dette eksperimentet, og deretter kanskje verdsette løsningen vi har kommet opp med for å forklare stabiliteten til hydrogen.</p>
-<p>Dobbeltspalteksperimentet er et eksperiment som har til hensikt å avgjøre hvorvidt noe er en bølge eller partikkel: bølgepakker sendes, en etter en, mot en vegg med to åpninger. På en annen vegg litt lenger unna på den andre siden av åpningene registrerer vi hvor bølgepakken treffer.</p>
-<p>Om vi gjør dette forsøket med en klassisk bølge (du kan faktisk simulere det med simulatoren du akkurat benyttet og en tavle) så vil vi se følgende:</p>
-<p><img alt="klassisk dobbeltspalt 2" src="../_images/classic_doubleslit.png" /></p>
-<p>Fra venstre til høyre: (1) bølgen forlater kilden og brer seg utover likt i alle retninger. (2) Bølgen passerer spaltene, og vi ser diffraksjon av to nye bølger gjennom hver spalt. (3) Det oppstår interferens mellom de to bølgene på veggen bak.</p>
-<p>Dette forsøket har blitt gjennomført på mange ulike bestanddeler i naturen; lys, atomer og molekyler. Resultatet er alltid følgende:</p>
-<figure class="align-default" id="figure-4">
-<a class="reference internal image-reference" href="../_images/doubleslit_detect.png"><img alt="../_images/doubleslit_detect.png" src="../_images/doubleslit_detect.png" style="height: 450px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Utfall av dobbeltspalteksperimentet.</span><a class="headerlink" href="#figure-4" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Når bestanddelene (en etter en) passerer gjennom to spalter, så ser vi et interferensmønster på veggen bak. Dette betyr at også partikler som elektroner, atomer og molekyler har bølgeegenskaper. I tillegg, som en liten overraskelse, ser vi at dersom vi forsøker å detektere <em>hvilken</em> spalt partiklene passerer gjennom, så forsvinner interferensmønsteret og vi ser klassisk partikkeloppførsel (som biljardkuler).</p>
-<p>Sagt med litt andre ord, så er det ikke kun lys som har både partikkel- og bølgeegenskaper.</p>
-<div class="admonition-diskuter admonition">
-<p class="admonition-title">Diskuter</p>
-<ul class="simple">
-<li><p>Forestill deg at du gjør dobbeltspalteksperimenter med biljardkuler på et biljardbord. Hvordan forventer du at fordelingen på den andre siden av veggen vil se ut?</p></li>
-<li><p>Gav de eksperimentene vi diskuterte før lunsj oss noen grunn til å anta at “solsystemmodellen” for hydrogen, representert ved to ladede kuler for elektronet og protonet, er realistisk?</p></li>
-<li><p>Er det et problem at noe i naturen oppfører seg både som en bølge og partikkel? Har vi noen grunn til å forvente at det må være det ene eller andre?</p></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="kvantemekanikk">
+<h1>Kvantemekanikk<a class="headerlink" href="#kvantemekanikk" title="Permalink to this headline">#</a></h1>
+<p>Dobbeltspalteksperimentet viser oss at små ting som atomer, elektroner og molekyler trenger en annen beskrivelse enn den vi får fra klassisk fysikk. Dette er ikke små kuler. Vi trenger noe som lar oss modellere disse systemene som bølger med struktur og endring. Vi kan bygge en slik mekanikk basert på tre viktige ingredienser, som ble initrodusert av tre viktige teoretikere på i løpet av 1920-tallet: (1) bølgefunksjoner, (2) en ligning som forteller oss hvordan de utvikler seg i tid, samt (3) en måte å tolke løsningen av ligningen på for å kunne predikere hva naturen gjør.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bolgefunksjoner">
+<h1>Bølgefunksjoner<a class="headerlink" href="#bolgefunksjoner" title="Permalink to this headline">#</a></h1>
+<p>Louis de Broglie foreslo i 1924 å utvide Einsteins hypotese om lys til å gjelde for alle partikler. Dermed gav det mening å snakke om frekvens og bølgelengde for alle objekter. Relasjonene mellom energi (E), frekvens (f) og bevegelsesmengde (p) er gitt ved:</p>
+<div class="math notranslate nohighlight">
+\[
+E = hf, \quad p = \frac{hf}{c},
+\]</div>
+<p>hvor <span class="math notranslate nohighlight">\(c\)</span> er lyshastigheten (og bølgelengden er <span class="math notranslate nohighlight">\(\lambda = c/f\)</span>).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="schrodingerlikningen">
+<h1>Schrödingerlikningen<a class="headerlink" href="#schrodingerlikningen" title="Permalink to this headline">#</a></h1>
+<p>Vi har tidligere simulert todimensjonale bølger ved å løse den klassiske bølgelikningen. På samme måte vil bølgefunksjonene som beskriver partiklene utvikle seg i henhold til en likning. Vi skal ikke utlede denne likningen (<a href="https://openworldlearning.github.io/docs/quantum_mechanics/schrodinger_equation.html">men se gjerne her for en utfyllende introduksjon</a>), men skriver den for ordens skyld ned her:</p>
+<div class="math notranslate nohighlight">
+\[
+\Big{ (}-\frac{\hbar^2}{2m}\frac{\partial^2 }{\partial x^2} + V(x) \Big{)} \Psi = i \hbar \frac{\partial }{\partial t}\Psi.
+\]</div>
+<p>I denne likningen er bølgefunksjonen <span class="math notranslate nohighlight">\(\Psi(x,t)\)</span> den ukjente som vi skal bestemme, mens <span class="math notranslate nohighlight">\(\hbar = \frac{h}{2\pi}\)</span> er Plancks konstant delt på <span class="math notranslate nohighlight">\(2\pi\)</span>, <span class="math notranslate nohighlight">\(V(x)\)</span> er et ledd som beskriver omgivelsene (den potensielle energien i et punkt <span class="math notranslate nohighlight">\(x\)</span>) og <span class="math notranslate nohighlight">\(i = \sqrt{2}\)</span> er den imaginære enheten.</p>
+<p>For å løse denne likningen for hydrogenatomet må vi sette inn for <span class="math notranslate nohighlight">\(V(x)\)</span>. Deretter kan vi enten være smarte, og løse problemet med penn og papir, eller vi kan bruke en algoritme slik vi gjorde for den klassiske</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="borns-fortolkning">
+<h1>Borns fortolkning<a class="headerlink" href="#borns-fortolkning" title="Permalink to this headline">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -438,13 +501,6 @@ Klassiske partikler passerer gjennom to spalter.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="b%C3%B8lge_og_partikkel.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Bølge eller partikkel?</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
