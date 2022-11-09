@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -122,6 +123,31 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="en_fortelling.html">
    Del 1: En fortelling om hydrogen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hva_er_hydrogen.html">
+   Hva er hydrogen?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="emisjon_absorpsjon.html">
+   Emisjon og absorbsjon
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fotoelektrisk_effekt.html">
+   Den fotoelektriske effekten
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sammensetning.html">
+   Bestanddelene i hydrogen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="stabilitet.html">
+   Hydrogen er stabilt
   </a>
  </li>
  <li class="toctree-l1">
@@ -507,7 +533,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "706300d93a5447d3a17f5375e42c2175"}
+{"version_major": 2, "version_minor": 0, "model_id": "01d0b151958649f7b9603212b3083563"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -517,25 +543,49 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">b</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unexpected exception formatting exception. Falling back to standard exception
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/interactiveshell.py&quot;, line 3433, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File &quot;/var/folders/s2/s91psjjx77g3znkybg2ng_b40000gn/T/ipykernel_37460/1274538861.py&quot;, line 1, in &lt;module&gt;
+    b.run(10000, n_iterations_per_step = 100)
+  File &quot;/usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py&quot;, line 1127, in run
+    self.advance()
+  File &quot;/usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py&quot;, line -1, in advance_vverlet
+KeyboardInterrupt
 
-<span class="nn">File /usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py:1127,</span> in <span class="ni">mdbox.run</span><span class="nt">(self, nsteps, n_iterations_per_step)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1125</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1126</span>     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iterations_per_step</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1127</span>         <span class="bp">self</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span>     <span class="bp">self</span><span class="o">.</span><span class="n">update_view</span><span class="p">()</span>
+During handling of the above exception, another exception occurred:
 
-<span class="nn">File /usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py:870,</span> in <span class="ni">mdbox.advance_vverlet</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fn</span> <span class="o">=</span> <span class="n">forces_new</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span> <span class="c1"># impose PBC</span>
-<span class="ne">--&gt; </span><span class="mi">870</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ndim</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">871</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="n">pos_new</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span>  <span class="o">=</span> <span class="p">(</span><span class="n">pos_new</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/interactiveshell.py&quot;, line 2052, in showtraceback
+    stb = self.InteractiveTB.structured_traceback(
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 1112, in structured_traceback
+    return FormattedTB.structured_traceback(
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 1006, in structured_traceback
+    return VerboseTB.structured_traceback(
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 859, in structured_traceback
+    formatted_exception = self.format_exception_as_a_whole(etype, evalue, etb, number_of_lines_of_context,
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 812, in format_exception_as_a_whole
+    frames.append(self.format_record(r))
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 730, in format_record
+    result += &#39;&#39;.join(_format_traceback_lines(frame_info.lines, Colors, self.has_colors, lvals))
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/utils.py&quot;, line 144, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/core.py&quot;, line 720, in lines
+    pieces = self.included_pieces
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/utils.py&quot;, line 144, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/core.py&quot;, line 667, in included_pieces
+    pos = scope_pieces.index(self.executing_piece)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/utils.py&quot;, line 144, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/core.py&quot;, line 646, in executing_piece
+    return only(
+  File &quot;/usr/local/lib/python3.10/site-packages/executing/executing.py&quot;, line 190, in only
+    raise NotOneValueFound(&#39;Expected one value, found 0&#39;)
+executing.executing.NotOneValueFound: Expected one value, found 0
 </pre></div>
 </div>
 </div>
