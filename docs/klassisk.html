@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/h_favicon.png"/>
@@ -119,42 +117,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="en_fortelling.html">
-   En fortelling om hydrogen
+   Del 1: En fortelling om hydrogen
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="hva_er_hydrogen.html">
-     Hva er hydrogen?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="emisjon_absorpsjon.html">
-     Emisjon og absorbsjon
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fotoelektrisk_effekt.html">
-     Den fotoelektriske effekten
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="sammensetning.html">
-     Bestanddelene i hydrogen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="stabilitet.html">
-     Hydrogen er stabilt
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="klassisk_hypotese.html">
@@ -168,7 +134,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="b%C3%B8lge_og_partikkel.html">
-   Del 2 : Bølge eller partikkel?
+   Del 2: Bølge eller partikkel?
   </a>
  </li>
  <li class="toctree-l1">
@@ -495,7 +461,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Nedenfor setter vi opp et hydrogenatom bestående av et proton og et elektron. Vi er ikke så opptatte av de eksakte verdiene for masse, ladning osv. - det viktigste er å finne ut om vi kan få dette til å bli stabilt. Du kan enten kjøre koden interaktivt i to celler som vist under, eller du kan gjøre en simulering hvor du regner litt frem i tids og deretter viser banen som elektronet har fulgt.</p>
+<p>Nedenfor setter vi opp et hydrogenatom bestående av et proton og et elektron. Vi er ikke så opptatte av de eksakte verdiene for masse, ladning osv. - det viktigste er å finne ut om vi kan få dette til å bli stabilt. Du kan enten kjøre koden interaktivt i to celler som vist under, eller du kan gjøre en simulering hvor du regner litt frem i tid og deretter viser banen som elektronet har fulgt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bubblebox</span> <span class="k">as</span> <span class="nn">bb</span> 
@@ -503,12 +469,100 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># for beregninger</span>
 
 
-<span class="n">elektronets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="c1"># Du kan endre på disse</span>
+<span class="n">elektronets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
 <span class="n">protonets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
-<span class="n">fest_protonet</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">elektronets_posisjon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
+<span class="n">fest_protonet</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># Hvis &quot;true&quot; -&gt; protonet kan ikke røre på seg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kjør interaktivt</span>
 
 <span class="c1"># sett opp hydrogen</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">()</span> <span class="c1">#proton_fixed = fest_protonet, vel_electron=elektronets_fart)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">(</span><span class="n">proton_fixed</span> <span class="o">=</span> <span class="n">fest_protonet</span><span class="p">,</span> <span class="n">vel_electron</span><span class="o">=</span><span class="n">elektronets_fart</span><span class="p">,</span> <span class="n">pos_electron</span> <span class="o">=</span> <span class="n">elektronets_posisjon</span><span class="p">)</span>
+
+<span class="c1"># tidssteg for tidsintegrasjon</span>
+<span class="n">b</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.0001</span>
+
+<span class="c1"># antall tidssteg</span>
+<span class="n">Nt</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">Nt</span><span class="p">),</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">float</span><span class="p">)</span> <span class="c1">#array for å lagre elektronets posisjoner</span>
+
+
+<span class="n">b</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "95f1e64384ed4b21bb22ffb4fa68c020"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unexpected exception formatting exception. Falling back to standard exception
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/interactiveshell.py&quot;, line 3433, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File &quot;/var/folders/s2/s91psjjx77g3znkybg2ng_b40000gn/T/ipykernel_36317/1274538861.py&quot;, line 1, in &lt;module&gt;
+    b.run(10000, n_iterations_per_step = 100)
+  File &quot;/usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py&quot;, line 1127, in run
+    self.advance()
+  File &quot;/usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py&quot;, line -1, in advance_vverlet
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/interactiveshell.py&quot;, line 2052, in showtraceback
+    stb = self.InteractiveTB.structured_traceback(
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 1112, in structured_traceback
+    return FormattedTB.structured_traceback(
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 1006, in structured_traceback
+    return VerboseTB.structured_traceback(
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 859, in structured_traceback
+    formatted_exception = self.format_exception_as_a_whole(etype, evalue, etb, number_of_lines_of_context,
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 812, in format_exception_as_a_whole
+    frames.append(self.format_record(r))
+  File &quot;/usr/local/lib/python3.10/site-packages/IPython/core/ultratb.py&quot;, line 730, in format_record
+    result += &#39;&#39;.join(_format_traceback_lines(frame_info.lines, Colors, self.has_colors, lvals))
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/utils.py&quot;, line 144, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/core.py&quot;, line 720, in lines
+    pieces = self.included_pieces
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/utils.py&quot;, line 144, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/core.py&quot;, line 667, in included_pieces
+    pos = scope_pieces.index(self.executing_piece)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/utils.py&quot;, line 144, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File &quot;/usr/local/lib/python3.10/site-packages/stack_data/core.py&quot;, line 646, in executing_piece
+    return only(
+  File &quot;/usr/local/lib/python3.10/site-packages/executing/executing.py&quot;, line 190, in only
+    raise NotOneValueFound(&#39;Expected one value, found 0&#39;)
+executing.executing.NotOneValueFound: Expected one value, found 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kjør denne cellen for å regne litt frem i tid og deretter vise banen til elektronet</span>
+
+<span class="c1"># sett opp hydrogen</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">(</span><span class="n">proton_fixed</span> <span class="o">=</span> <span class="n">fest_protonet</span><span class="p">,</span> <span class="n">vel_electron</span><span class="o">=</span><span class="n">elektronets_fart</span><span class="p">)</span>
 
 <span class="c1"># tidssteg for tidsintegrasjon</span>
 <span class="n">b</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.0001</span>
@@ -533,115 +587,15 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-2.0, 2.0)
-</pre></div>
 </div>
-<img alt="../_images/klassisk_5_1.png" src="../_images/klassisk_5_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elektronets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
-<span class="n">protonets_fart</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>
-<span class="n">fest_protonet</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="c1"># sett opp hydrogen</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">(</span><span class="n">proton_fixed</span> <span class="o">=</span> <span class="n">fest_protonet</span><span class="p">,</span> <span class="n">vel_electron</span><span class="o">=</span><span class="n">elektronets_fart</span><span class="p">)</span>
-
-<span class="c1"># tidssteg for tidsintegrasjon</span>
-<span class="n">b</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.0001</span>
-
-<span class="c1"># antall tidssteg</span>
-<span class="n">Nt</span> <span class="o">=</span> <span class="mi">100000</span>
-
-<span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">Nt</span><span class="p">),</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">float</span><span class="p">)</span> <span class="c1">#array for å lagre elektronets posisjoner</span>
-
-
-<span class="n">b</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "4673610e348445de996dd1de8d8a01cf"}
-</script></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">b</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-
-<span class="nn">File /usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py:1127,</span> in <span class="ni">mdbox.run</span><span class="nt">(self, nsteps, n_iterations_per_step)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1125</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsteps</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1126</span>     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iterations_per_step</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1127</span>         <span class="bp">self</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span>     <span class="bp">self</span><span class="o">.</span><span class="n">update_view</span><span class="p">()</span>
-
-<span class="nn">File /usr/local/lib/python3.10/site-packages/bubblebox/mdbox.py:862,</span> in <span class="ni">mdbox.advance_vverlet</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span> <span class="bp">self</span><span class="o">.</span><span class="n">d_pos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">+</span> <span class="mf">.5</span><span class="o">*</span><span class="n">Fn</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">masses_inv</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span> <span class="n">pos_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">d_pos</span>
-<span class="ne">--&gt; </span><span class="mi">862</span> <span class="n">forces_new</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">forces</span><span class="p">(</span><span class="n">pos_new</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">interactions</span><span class="p">,</span> <span class="n">r2_cut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">r2_cut</span><span class="p">,</span> <span class="n">pair_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pair_list</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vel_</span> <span class="o">+</span> <span class="mf">.5</span><span class="o">*</span><span class="p">(</span><span class="n">forces_new</span> <span class="o">+</span> <span class="n">Fn</span><span class="p">)</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">masses_inv</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span> <span class="bp">self</span><span class="o">.</span><span class="n">Fn</span> <span class="o">=</span> <span class="n">forces_new</span>
-
-<span class="nn">File /usr/local/lib/python3.10/site-packages/numba/core/serialize.py:29,</span> in <span class="ni">_numba_unpickle</span><span class="nt">(address, bytedata, hashed)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="c1"># Keep unpickled object via `numba_unpickle` alive.</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="n">_unpickled_memo</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="ne">---&gt; </span><span class="mi">29</span> <span class="k">def</span> <span class="nf">_numba_unpickle</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">bytedata</span><span class="p">,</span> <span class="n">hashed</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="sd">&quot;&quot;&quot;Used by `numba_unpickle` from _helperlib.c</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span><span class="sd">     Parameters</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="sd">         unpickled object</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">hashed</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">showcase</span><span class="o">.</span><span class="n">classical_hydrogen</span><span class="p">(</span><span class="n">proton_fixed</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">vel_electron</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mf">0.</span><span class="p">]))</span>
-
-
-<span class="n">B</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">interactions</span><span class="p">)</span>
-<span class="n">B</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.0001</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">n_iterations_per_step</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">run</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="admonition-undersok admonition">
+<p class="admonition-title">Undersøk</p>
+<ul class="simple">
+<li><p>Hvordan skal du gå frem for å vurdere om banen er stabil eller ikke?</p></li>
+<li><p>Hvilke parametre kan du endre på her?</p></li>
+<li><p>Kan du finne en stabil bane til elektronet?</p></li>
+<li><p>Hvilken betydning har det om du endrer avstanden mellom protonet og elektronet?</p></li>
+</ul>
 </div>
 <div class="toctree-wrapper compound">
 </div>
