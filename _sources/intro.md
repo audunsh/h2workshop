@@ -13,12 +13,19 @@ Innholdet for dagen er som følger:
 
 |Tid|Innhold|
 |----------|:-------------:|
-| 09.30-10.15  |      Velkomst med senterleder og kvantekjemiker Trygve Helgaker; «Kvantemekanikk og kjemi» |
-| 10.30-11.30   |    Tema: Hydrogenatomet og H2-molekylet – hvordan oppnår de stabilitet? Veiledning med Audun Skau Hansen og fler. |
+| 09.00-09.40  |     Mattenøtter |
+| 09.40-10.15  |      Innledning ved Audun Skau Hansen: «En reise fra stort til smått: mysteriene vi ikke vet svaret på» |
+| 10.15-10.30  |      **Pause** |
+| 10.30-11.30   |    Tema: Hydrogenatomet og H2-molekylet – hvordan oppnår de stabilitet? Veiledning med Audun |
 |                |                Vi gjør analyse, utregninger og simuleringer med utgangspunkt i klassisk (Newtoniansk) mekanikk for å studere systemene. |
-| 11.30-12.15    |    Lunsj på Hylleras, mulighet for å møte flere forskere ved senteret. | 
-| 12.15-13.00     |   Introduksjon til grunnleggende flerpartikkel kvantemekanikk ved Andre Laestadius| 
-| 13.00-14.15      |   Tema: Hydrogenatomet og H2-molekylet – den kvantemekaniske beskrivelsen. Veiledning med Audun Skau Hansen og fler. |
-|                   |              Vi gjør ny analyse basert på grunnleggende kvantemekanikk, utvider orbitalbegrepet og gjør simuleringer av systemene på kvantenivå. |
+| 11.30-12.00   |    Tema: Hydrogenatomet og H2-molekylet – den kvantemekaniske beskrivelsen. |
+|                |                Vi gjør ny analyse basert på grunnleggende kvantemekanikk, utvider orbitalbegrepet og gjør simuleringer av systemene på kvantenivå. |
+| 12.00-12.45    |    **Lunsj på Hylleras, mulighet for å møte flere forskere ved senteret.** | 
+| 12.45-13.30     |   Besøk på massespektrometri- og virtuell virkelighet(VR)-laboratorium | 
+| 13.30-14.30      |   Introduksjon til grunnleggende flerpartikkel kvantemekanikk ved Andre Laestadius |
 | 14.30-15.00   |      Avslutning, presentasjon av resultater og oppsummering. |
 
+
+```python
+
+```

@@ -51,8 +51,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/h_favicon.png"/>
@@ -428,17 +426,26 @@ title="Print to PDF"
 <p>Mange differensiallikninger er enkle å løse (tilnærmet) på datamaskinen om vi erstatter de deriverte med numeriske approksimasjoner. For å gjøre det litt spennende skal vi nå løse denne likningen direkte på bildet fra webcamet, og bruke mørke felter som “vegger”. <a href="https://audunsh.github.io/projects/2015-11-19-wavecam/">Du kan lese en utfyllende forklaring av fremgangsmåten her.</a> Dette krever noen ekstra moduler i Python:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3 install opencv-python
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>opencv-python
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: opencv-python in /usr/local/lib/python3.10/site-packages (4.6.0.66)
-Requirement already satisfied: numpy&gt;=1.19.3 in /usr/local/lib/python3.10/site-packages (from opencv-python) (1.23.4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -umba (/usr/local/lib/python3.10/site-packages)</span>
+
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip available: <span class=" -Color -Color-Red">22.2.2</span> -&gt; <span class=" -Color -Color-Green">22.3.1</span>
-<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">python3.10 -m pip install --upgrade pip</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -umba (/usr/local/lib/python3.10/site-packages)</span>
+Requirement already satisfied: opencv-python in /usr/local/lib/python3.10/site-packages (4.6.0.66)
+Requirement already satisfied: numpy&gt;=1.21.2 in /usr/local/lib/python3.10/site-packages (from opencv-python) (1.23.5)
+<span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -umba (/usr/local/lib/python3.10/site-packages)</span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -umba (/usr/local/lib/python3.10/site-packages)</span>
+<span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -umba (/usr/local/lib/python3.10/site-packages)</span>
+<span class=" -Color -Color-Yellow">WARNING: Ignoring invalid distribution -umba (/usr/local/lib/python3.10/site-packages)</span>
+
 </pre></div>
 </div>
 </div>
@@ -460,7 +467,7 @@ Requirement already satisfied: numpy&gt;=1.19.3 in /usr/local/lib/python3.10/sit
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
 
 <span class="k">class</span> <span class="nc">fwave</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Class to solve the classical wave equation:</span>
 <span class="sd">    </span>
 <span class="sd">    (d/dx)^2 u(x,t) = -c^2 (d/dt)^2 u(x,t)</span>
